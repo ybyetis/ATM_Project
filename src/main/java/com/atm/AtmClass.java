@@ -67,9 +67,13 @@ public class AtmClass {
                 Integer processNo = myObj.nextInt();
                 Process process = new Process();
                 if (processNo == 1) {
-                    process.paraYatir(userNo.get(i).getBalance());
+                    System.out.print("Lütfen yatırılacak tutarı giriniz: ");
+                    Integer money = myObj.nextInt();
+                    process.paraYatir(userNo.get(i).getBalance(),money);
                 } else if (processNo == 2) {
-                    process.paraCek(userNo.get(i).getBalance());
+                    System.out.print("Lütfen çekilecek tutarı giriniz: ");
+                    Integer money = myObj.nextInt();
+                    process.paraCek(userNo.get(i).getBalance(),money);
                 } else {
                     System.out.println("Geçersiz işlem numarası girildi!");
                 }
